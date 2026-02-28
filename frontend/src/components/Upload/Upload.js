@@ -198,11 +198,7 @@ const Upload = () => {
                                     Cancel
                                 </button>
                                 <button
-                                    disabled={
-                                        previewUrl && caption && !isUploading
-                                            ? ""
-                                            : "disable"
-                                    }
+                                    disabled={(!previewUrl || isUploading) ? "disable" : ""}
                                     className={cx("btn-submit", {
                                         "is-loading": isUploading,
                                     })}
